@@ -1,0 +1,15 @@
+.jumbotron {
+    background-color: #37a882 !important;
+}
+
+.train-viewer, .add-train {
+    background-color: #37a882 !important;
+    color: white !important;
+    font-weight: bold;  
+    text-align: center !important;
+    font-size: 1.2em;
+}
+
+h1, h3, .header {
+    color: white !important;
+}

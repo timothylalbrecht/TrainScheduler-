@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bus Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container" id="head-container">
+    <div class="jumbotron text-center" id="header">
+        <h1><img src="assets/images/bus.png"> Chapel Thrill <img src="assets/images/bus.png"></h1>
+        <h3>Bus Scheduler</h3>
+    </div>
+</div>
+
+
+
+<div class="container">
+    
+    <div class="panel panel-default">
+        <div class="panel-heading train-viewer"> Current Bus Schedule </div>
+
+        <table class="table table-hover">
+            <tr>
+                <th scope="col">Bus Route</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scrope="col">Minutes Away</th>
+                <th scope="col">Next Arrival</th>
+            </tr>
+            <tbody id="table-data"></tbody>
+        </table>
+            <hr>
+    </div>
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading add-train"> Update Bus Data </div>
+
+        <div class="panel-body">
+            <form>
+                <div class="form-group">
+                    <label for="trainName">Bus Route:</label>
+                    <input type="text" class="form-control" id="train-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination:</label>
+                    <input type="text" class="form-control" id="train-destination" required>
+                </div>
+                <div class="form-group">
+                    <label for="startTime">First Bus Time: (military time) </label>
+                    <input type="text" class="form-control" placeholder="HH:MM" id="train-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="endTime">Frequency (minutes)</label>
+                    <input type="text" class="form-control" id="time-freq">
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" id="btn-add" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+<script src="assets/js/train.js"></script>
+</body>
+</html>
